@@ -39,7 +39,9 @@ public class Main {
         // 1. Gemini LLM Modelini Başlat
         ChatLanguageModel chatModel = GoogleAiGeminiChatModel.builder()
                 .apiKey(apiKey)
-                .modelName("gemini-2.5-flash")
+                .modelName("gemini-3.5-flash-lite")
+                .timeout(java.time.Duration.ofSeconds(30))
+                .maxRetries(1)
                 .build();
 
         // 2. İngilizce Lokal Embedding Modeli
