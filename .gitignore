@@ -39,3 +39,4 @@ build/
 .env
 documents/
 *.json
+indexed_files.txt
